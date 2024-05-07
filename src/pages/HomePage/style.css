@@ -1,0 +1,116 @@
+/* style.css */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.profile-card {
+  width: 500px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: 180px; /* Adjust the height as needed */
+  display: block;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 0 0 80px 80px;
+}
+
+.profile-info {
+  padding: 15px;
+}
+
+.profile-name, .profile-age, .profile-description {
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-age {
+  color: #666;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.profile-description {
+  color: #444;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.profile-interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.interest {
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  color: white
+}
+
+.explosive { background-color: #f44336; }
+.arson { background-color: #ff9800; }
+.curio { background-color: #9c27b0; }
+.howling { background-color: #3f51b5; }
+.scary-movies { background-color: #009688; }
+.gardening { background-color: #4caf50; }
+
+.explosive:hover { background-color: #d32f2f; }
+.arson:hover { background-color: #e65100; }
+.curio:hover { background-color: #7b1fa2; }
+.howling:hover { background-color: #303f9f; }
+.scary-movies:hover { background-color: #00796b; }
+.gardening:hover { background-color: #388e3c; }
+
+.read-more, .message-button {
+  color: #c2c2c2;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.read-more:hover, .message-button:hover {
+  color: #888888;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.action-button.like { color: #d9534f; }
+.action-button.dislike { color: #5bc0de; }
