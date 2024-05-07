@@ -1,31 +1,48 @@
-/* style.css */
+h2 {
+  font-size: 20px;
+  color: #555;
+  margin-top: 8px
+}
+
 .profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+  overflow: hidden;
 }
 
 .profile-card {
-  width: 500px;
+  width: 480px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  border-radius: 8px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
 .profile-image {
   width: 100%;
-  height: 180px; /* Adjust the height as needed */
+  height: 360px;
   display: block;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 0 0 80px 80px;
+  object-fit: cover;
+  border-radius: 20px 20px 80px 80px;
+  margin: 0 auto;
 }
 
 .profile-info {
-  padding: 15px;
+  padding: 20px 40px;
+}
+
+.profile-info--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info--text {
+  flex-basis: 75%;
+  text-align: left;
 }
 
 .profile-name, .profile-age, .profile-description {
@@ -44,10 +61,26 @@
 }
 
 .profile-description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px
+}
+
+.profile-description--content {
   color: #444;
   font-size: 14px;
   margin-top: 10px;
-  padding: 0 10px;
+}
+
+.read-more {
+  color: #989797;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  align-self: flex-end;
+  margin-top: 4px;
+  font-style: italic;
 }
 
 .profile-interests {
@@ -65,52 +98,88 @@
   border-radius: 20px;
   cursor: pointer;
   outline: none;
-  color: white
 }
 
-.explosive { background-color: #f44336; }
-.arson { background-color: #ff9800; }
-.curio { background-color: #9c27b0; }
-.howling { background-color: #3f51b5; }
-.scary-movies { background-color: #009688; }
-.gardening { background-color: #4caf50; }
+.interest.explosive { background-color: #ffadad; }
+.interest.arson { background-color: #ffd6a5; }
+.interest.curio { background-color: #fdffb6; }
+.interest.howling { background-color: #caffbf; }
+.interest.scary-movies { background-color: #9bf6ff; }
+.interest.gardening { background-color: #a0c4ff; }
 
-.explosive:hover { background-color: #d32f2f; }
-.arson:hover { background-color: #e65100; }
-.curio:hover { background-color: #7b1fa2; }
-.howling:hover { background-color: #303f9f; }
-.scary-movies:hover { background-color: #00796b; }
-.gardening:hover { background-color: #388e3c; }
-
-.read-more, .message-button {
-  color: #c2c2c2;
-  border: none;
-  padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 10px;
-  width: 100%;
+.interest:hover {
+  filter: brightness(0.9);
 }
 
-.read-more:hover, .message-button:hover {
+.read-more:hover {
   color: #888888;
 }
 
 .action-buttons {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  margin-top: 15px;
+  justify-content: space-between;
+  margin-top: -60px;
+  padding: 0 50px;
 }
 
 .action-button {
-  background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
   color: #666;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 10px;
+  background-color: white;
 }
 
-.action-button.like { color: #d9534f; }
-.action-button.dislike { color: #5bc0de; }
+.action-button.like {
+  border: 3px solid #e10781;
+  color: #e10781;
+}
+
+.action-button.dislike {
+  border: 3px solid #575757;
+  color: #575757;
+}
+
+.action-button.like:hover {
+  color: #f859b2;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.action-button.dislike:hover {
+  color: #807e7e;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.send-message {
+  border: none;
+  color: #575757;
+  background-color: white;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.send-message:hover {
+  color: #807e7e;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
